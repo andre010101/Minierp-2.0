@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniErp2", "MiniErp2.csproj", "{C45E4E30-DEFF-43A4-960C-6D45200049DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataModels", "DataModels", "{8C591A19-1178-45E9-B7C1-0B95819EB974}"
+	ProjectSection(SolutionItems) = preProject
+		Clientes.cs = Clientes.cs
+		Fornecedores.cs = Fornecedores.cs
+		Notas.cs = Notas.cs
+		Produtos.cs = Produtos.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{FB78342F-C931-4B14-AB97-D52702335C76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{2F09CF7C-0F1F-4AD6-812B-6AEED7B616BC}"
+	ProjectSection(SolutionItems) = preProject
+		Contexto.cs = Contexto.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C45E4E30-DEFF-43A4-960C-6D45200049DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45E4E30-DEFF-43A4-960C-6D45200049DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45E4E30-DEFF-43A4-960C-6D45200049DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45E4E30-DEFF-43A4-960C-6D45200049DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76AC2134-9FA3-4C6F-BDE9-5B3533C22CCE}
+	EndGlobalSection
+EndGlobal
