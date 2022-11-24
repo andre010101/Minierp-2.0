@@ -50,7 +50,6 @@ C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\bin\Debug\net6.0-windows\runtimes\win\li
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.csproj.AssemblyReference.cache
-C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.Form1.resources
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.csproj.GenerateResource.cache
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.AssemblyInfoInputs.cache
@@ -62,3 +61,5 @@ C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\refint\MiniErp2
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.pdb
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.genruntimeconfig.cache
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\ref\MiniErp2.dll
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.cadastroClientes.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.TelaInicial.resources

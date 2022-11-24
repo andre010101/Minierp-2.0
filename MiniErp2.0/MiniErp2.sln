@@ -20,6 +20,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		Contexto.cs = Contexto.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{7BDE7E1F-1BEB-4133-9867-F30CD5CF6B69}"
+	ProjectSection(SolutionItems) = preProject
+		cadastroClientes.cs = cadastroClientes.cs
+		cadastroClientes.Designer.cs = cadastroClientes.Designer.cs
+		cadastroClientes.resx = cadastroClientes.resx
+		Form1.cs = Form1.cs
+		Form1.Designer.cs = Form1.Designer.cs
+		Form1.resx = Form1.resx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
