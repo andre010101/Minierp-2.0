@@ -9,7 +9,7 @@ namespace MiniErp2
 
         public DbSet<Clientes> clientes { get; set; }
         public DbSet<Produtos> produtos { get; set; }
-
+        public DbSet<Pedido> pedido { get; set; }
         public DbSet<Fornecedores> fornecedor { get; set; }
         public DbSet<Notas> notas { get; set; }
 
@@ -26,19 +26,19 @@ namespace MiniErp2
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Produtos>()
-                .HasOne(e => e.clientes)
-                .WithMany(e => e.produtos)
+            modelBuilder.Entity<Pedido>()
+                .HasOne(e => e.cliente)
+                .WithMany(e => e.pedidos)
                 .OnDelete(DeleteBehavior.ClientCascade);
 
-            modelBuilder.Entity<Clientes>()
-            .HasOne(e => e.notas)
-            .WithMany(e => e.clientes)
+            modelBuilder.Entity<Pedido>()
+            .HasOne(e => e.nota)
+            .WithMany(e => e.pedidos)
             .OnDelete(DeleteBehavior.ClientCascade);
 
-            modelBuilder.Entity<Produtos>()
-          .HasOne(e => e.notas)
-          .WithMany(e => e.produto)
+            modelBuilder.Entity<Pedido>()
+          .HasOne(e => e.produtos)
+          .WithMany(e => e.pedidos)
           .OnDelete(DeleteBehavior.ClientCascade);
 
  

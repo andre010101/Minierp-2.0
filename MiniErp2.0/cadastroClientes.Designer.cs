@@ -42,11 +42,11 @@
             this.textBox_telefoneCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_idCliente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_GravarClientes = new System.Windows.Forms.Button();
             this.button_ConsultarClientes = new System.Windows.Forms.Button();
+            this.textBox_notasCliente = new System.Windows.Forms.TextBox();
+            this.listView_Clientes = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -166,19 +166,6 @@
             this.textBox_idCliente.Size = new System.Drawing.Size(149, 23);
             this.textBox_idCliente.TabIndex = 9;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(218, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 165);
-            this.dataGridView1.TabIndex = 10;
-            // 
             // button_GravarClientes
             // 
             this.button_GravarClientes.BackColor = System.Drawing.Color.Lavender;
@@ -188,6 +175,7 @@
             this.button_GravarClientes.TabIndex = 11;
             this.button_GravarClientes.Text = "Gravar";
             this.button_GravarClientes.UseVisualStyleBackColor = false;
+            this.button_GravarClientes.Click += new System.EventHandler(this.button_GravarClientes_Click);
             // 
             // button_ConsultarClientes
             // 
@@ -198,6 +186,23 @@
             this.button_ConsultarClientes.TabIndex = 12;
             this.button_ConsultarClientes.Text = "Consultar";
             this.button_ConsultarClientes.UseVisualStyleBackColor = false;
+            this.button_ConsultarClientes.Click += new System.EventHandler(this.button_ConsultarClientes_Click);
+            // 
+            // textBox_notasCliente
+            // 
+            this.textBox_notasCliente.Location = new System.Drawing.Point(218, 274);
+            this.textBox_notasCliente.Name = "textBox_notasCliente";
+            this.textBox_notasCliente.PlaceholderText = "Digite o id do cliente";
+            this.textBox_notasCliente.Size = new System.Drawing.Size(149, 23);
+            this.textBox_notasCliente.TabIndex = 13;
+            // 
+            // listView_Clientes
+            // 
+            this.listView_Clientes.Location = new System.Drawing.Point(207, 76);
+            this.listView_Clientes.Name = "listView_Clientes";
+            this.listView_Clientes.Size = new System.Drawing.Size(389, 165);
+            this.listView_Clientes.TabIndex = 14;
+            this.listView_Clientes.UseCompatibleStateImageBehavior = false;
             // 
             // cadastroClientes
             // 
@@ -205,9 +210,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listView_Clientes);
+            this.Controls.Add(this.textBox_notasCliente);
             this.Controls.Add(this.button_ConsultarClientes);
             this.Controls.Add(this.button_GravarClientes);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox_idCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_telefoneCliente);
@@ -221,7 +227,6 @@
             this.Text = "Cadastro de Clientes";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,8 +248,9 @@
         private TextBox textBox_telefoneCliente;
         private Label label4;
         private TextBox textBox_idCliente;
-        private DataGridView dataGridView1;
         private Button button_GravarClientes;
         private Button button_ConsultarClientes;
+        private TextBox textBox_notasCliente;
+        private ListView listView_Clientes;
     }
 }

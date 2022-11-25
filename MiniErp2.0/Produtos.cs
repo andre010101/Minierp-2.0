@@ -12,11 +12,8 @@ namespace MiniErp2.DataModels
         public string nome { get; set; }
         public int preco { get; set; }
         public int quantidade { get; set; }
-        public virtual Fornecedores fornecedor { get; set; }
+        public virtual ICollection<Pedido> pedidos { get; set; }
 
-        public virtual Clientes clientes { get; set; }
-
-        public virtual Notas notas { get; set; }
     }
 }
 

@@ -10,13 +10,13 @@ namespace MiniErp2.DataModels
     {
        
         public int id { get; set; }
+        public int Nfnumero { get; set; }
         public string infoNota { get; set; }
-        public int preco { get; set; }
-        public int quantidade { get; set; }
-        public virtual ICollection<Produtos> produto { get; set; }
-        public virtual ICollection<Clientes> clientes { get; set; }
+        public int total { get; set; }
+       
+        public virtual ICollection<Pedido> pedidos { get; set; }
 
-        public virtual ICollection<Fornecedores> fornecedores { get; set; }
+       
     }
 }
 

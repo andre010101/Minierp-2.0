@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniErp2.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,34 @@ namespace MiniErp2._0
         {
             cadastroClientes frm = new cadastroClientes();
             frm.Show();
+        }
+
+        private void button_GravarFornecedor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contexto contexto = new Contexto();
+
+                Fornecedores f = new Fornecedores();
+
+                f.cnpj = textBox_cnpjFornecedor.Text;
+                f.nome = textBox_NomeFornecedor.Text;
+                f.telefone = textBox_telefoneFornecedor.Text;
+                f.id = int.Parse(textBox_idFornecedor.Text);
+                
+
+                
+                contexto.fornecedor.Add(f);
+                contexto.SaveChanges();
+                MessageBox.Show("fornecedor inserida com sucesso");
+
+            }
+            catch (Exception ex)
+
+
+            {
+                MessageBox.Show("error");
+            }
         }
     }
 }

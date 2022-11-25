@@ -68,6 +68,7 @@
             this.button_GravarFornecedor.TabIndex = 23;
             this.button_GravarFornecedor.Text = "Gravar";
             this.button_GravarFornecedor.UseVisualStyleBackColor = false;
+            this.button_GravarFornecedor.Click += new System.EventHandler(this.button_GravarFornecedor_Click);
             // 
             // textBox_idFornecedor
             // 

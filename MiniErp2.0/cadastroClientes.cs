@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniErp2.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace MiniErp2._0
 {
@@ -14,6 +17,7 @@ namespace MiniErp2._0
     {
         public cadastroClientes()
         {
+            
             InitializeComponent();
         }
 
@@ -41,6 +45,64 @@ namespace MiniErp2._0
         {
             cadastroDeProdutos frm = new cadastroDeProdutos();
             frm.Show();
+        }
+
+        private void button_GravarClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contexto contexto = new Contexto();
+
+                Clientes c = new Clientes();
+                //c.id = int.Parse(textBox_idCliente.Text);
+                c.cpf = textBox_cpfCliente.Text;
+                c.telefone = textBox_telefoneCliente.Text;
+                c.nome = textBox_NomeCliente.Text;
+                
+                contexto.clientes.Add(c);
+                contexto.SaveChanges();
+                MessageBox.Show("Cliente inserida com sucesso");
+                
+            }
+            catch (Exception ex)
+            
+            
+            {
+                MessageBox.Show("error");
+            }
+            
+        }
+
+        private void button_ConsultarClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                
+                using (Contexto db = new Contexto())
+                {
+                    List<Clientes> lista = db.clientes.ToList();
+                    foreach (Clientes c in lista)
+                    {
+                        ListViewItem item = new ListViewItem(c.id.ToString());
+                        item.SubItems.Add(c.nome);
+                        item.SubItems.Add(c.telefone);
+                        item.SubItems.Add(c.cpf);
+                        listView_Clientes.Items.Add(item);
+                    }
+                }
+                
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
         }
     }
 }

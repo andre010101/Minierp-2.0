@@ -29,5 +29,11 @@ namespace MiniErp2._0
             CadastrarNotas frm = new CadastrarNotas();
             frm.Show();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            cadastroDeProdutos frm = new cadastroDeProdutos();
+            frm.Show();
+        }
     }
 }
