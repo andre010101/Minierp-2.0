@@ -77,10 +77,11 @@ namespace MiniErp2._0
         {
             try
             {
+                listView_Clientes.Items.Clear();
 
-                
                 using (Contexto db = new Contexto())
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     List<Clientes> lista = db.clientes.ToList();
                     foreach (Clientes c in lista)
                     {
@@ -91,8 +92,7 @@ namespace MiniErp2._0
                         listView_Clientes.Items.Add(item);
                     }
                 }
-                
-
+                Cursor.Current = Cursors.Default;
 
 
 

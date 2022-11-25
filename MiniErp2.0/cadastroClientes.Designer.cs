@@ -46,6 +46,10 @@
             this.button_ConsultarClientes = new System.Windows.Forms.Button();
             this.textBox_notasCliente = new System.Windows.Forms.TextBox();
             this.listView_Clientes = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,11 +202,40 @@
             // 
             // listView_Clientes
             // 
+            this.listView_Clientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView_Clientes.FullRowSelect = true;
+            this.listView_Clientes.GridLines = true;
             this.listView_Clientes.Location = new System.Drawing.Point(207, 76);
+            this.listView_Clientes.MultiSelect = false;
             this.listView_Clientes.Name = "listView_Clientes";
-            this.listView_Clientes.Size = new System.Drawing.Size(389, 165);
+            this.listView_Clientes.Size = new System.Drawing.Size(593, 165);
             this.listView_Clientes.TabIndex = 14;
             this.listView_Clientes.UseCompatibleStateImageBehavior = false;
+            this.listView_Clientes.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Cliente id";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            this.columnHeader2.Width = 300;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CPF";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Telefone";
+            this.columnHeader4.Width = 100;
             // 
             // cadastroClientes
             // 
@@ -252,5 +285,9 @@
         private Button button_ConsultarClientes;
         private TextBox textBox_notasCliente;
         private ListView listView_Clientes;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
     }
 }
