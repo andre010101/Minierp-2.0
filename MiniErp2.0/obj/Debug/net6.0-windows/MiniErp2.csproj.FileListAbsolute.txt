@@ -63,3 +63,7 @@ C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2.genrun
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\ref\MiniErp2.dll
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.cadastroClientes.resources
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.TelaInicial.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.Form_fornecedores.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.cadastroDeProdutos.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.Properties.Resources.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.CadastrarNotas.resources
