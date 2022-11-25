@@ -40,11 +40,8 @@
             this.textBox_cpfCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_telefoneCliente = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_idCliente = new System.Windows.Forms.TextBox();
             this.button_GravarClientes = new System.Windows.Forms.Button();
             this.button_ConsultarClientes = new System.Windows.Forms.Button();
-            this.textBox_notasCliente = new System.Windows.Forms.TextBox();
             this.listView_Clientes = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -153,27 +150,10 @@
             this.textBox_telefoneCliente.Size = new System.Drawing.Size(149, 23);
             this.textBox_telefoneCliente.TabIndex = 7;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Id Cliente";
-            // 
-            // textBox_idCliente
-            // 
-            this.textBox_idCliente.Location = new System.Drawing.Point(12, 218);
-            this.textBox_idCliente.Name = "textBox_idCliente";
-            this.textBox_idCliente.PlaceholderText = "Digite o id do cliente";
-            this.textBox_idCliente.Size = new System.Drawing.Size(149, 23);
-            this.textBox_idCliente.TabIndex = 9;
-            // 
             // button_GravarClientes
             // 
             this.button_GravarClientes.BackColor = System.Drawing.Color.Lavender;
-            this.button_GravarClientes.Location = new System.Drawing.Point(12, 274);
+            this.button_GravarClientes.Location = new System.Drawing.Point(12, 218);
             this.button_GravarClientes.Name = "button_GravarClientes";
             this.button_GravarClientes.Size = new System.Drawing.Size(75, 23);
             this.button_GravarClientes.TabIndex = 11;
@@ -184,21 +164,13 @@
             // button_ConsultarClientes
             // 
             this.button_ConsultarClientes.BackColor = System.Drawing.Color.Lavender;
-            this.button_ConsultarClientes.Location = new System.Drawing.Point(93, 274);
+            this.button_ConsultarClientes.Location = new System.Drawing.Point(93, 218);
             this.button_ConsultarClientes.Name = "button_ConsultarClientes";
             this.button_ConsultarClientes.Size = new System.Drawing.Size(75, 23);
             this.button_ConsultarClientes.TabIndex = 12;
             this.button_ConsultarClientes.Text = "Consultar";
             this.button_ConsultarClientes.UseVisualStyleBackColor = false;
             this.button_ConsultarClientes.Click += new System.EventHandler(this.button_ConsultarClientes_Click);
-            // 
-            // textBox_notasCliente
-            // 
-            this.textBox_notasCliente.Location = new System.Drawing.Point(218, 274);
-            this.textBox_notasCliente.Name = "textBox_notasCliente";
-            this.textBox_notasCliente.PlaceholderText = "Digite o id do cliente";
-            this.textBox_notasCliente.Size = new System.Drawing.Size(149, 23);
-            this.textBox_notasCliente.TabIndex = 13;
             // 
             // listView_Clientes
             // 
@@ -209,10 +181,10 @@
             this.columnHeader4});
             this.listView_Clientes.FullRowSelect = true;
             this.listView_Clientes.GridLines = true;
-            this.listView_Clientes.Location = new System.Drawing.Point(207, 76);
+            this.listView_Clientes.Location = new System.Drawing.Point(183, 76);
             this.listView_Clientes.MultiSelect = false;
             this.listView_Clientes.Name = "listView_Clientes";
-            this.listView_Clientes.Size = new System.Drawing.Size(593, 165);
+            this.listView_Clientes.Size = new System.Drawing.Size(617, 165);
             this.listView_Clientes.TabIndex = 14;
             this.listView_Clientes.UseCompatibleStateImageBehavior = false;
             this.listView_Clientes.View = System.Windows.Forms.View.Details;
@@ -244,11 +216,8 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView_Clientes);
-            this.Controls.Add(this.textBox_notasCliente);
             this.Controls.Add(this.button_ConsultarClientes);
             this.Controls.Add(this.button_GravarClientes);
-            this.Controls.Add(this.textBox_idCliente);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_telefoneCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_cpfCliente);
@@ -279,11 +248,8 @@
         private TextBox textBox_cpfCliente;
         private Label label3;
         private TextBox textBox_telefoneCliente;
-        private Label label4;
-        private TextBox textBox_idCliente;
         private Button button_GravarClientes;
         private Button button_ConsultarClientes;
-        private TextBox textBox_notasCliente;
         private ListView listView_Clientes;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;

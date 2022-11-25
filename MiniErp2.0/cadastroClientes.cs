@@ -54,7 +54,7 @@ namespace MiniErp2._0
                 Contexto contexto = new Contexto();
 
                 Clientes c = new Clientes();
-                //c.id = int.Parse(textBox_idCliente.Text);
+                
                 c.cpf = textBox_cpfCliente.Text;
                 c.telefone = textBox_telefoneCliente.Text;
                 c.nome = textBox_NomeCliente.Text;

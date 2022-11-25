@@ -38,6 +38,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{7BDE7E1F
 		Form1.cs = Form1.cs
 		Form1.Designer.cs = Form1.Designer.cs
 		Form1.resx = Form1.resx
+		TelaInicial.cs = TelaInicial.cs
+		TelaInicial.Designer.cs = TelaInicial.Designer.cs
+		TelaInicial.resx = TelaInicial.resx
 	EndProjectSection
 EndProject
 Global

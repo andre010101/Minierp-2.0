@@ -46,7 +46,7 @@ namespace MiniErp2._0
                 f.cnpj = textBox_cnpjFornecedor.Text;
                 f.nome = textBox_NomeFornecedor.Text;
                 f.telefone = textBox_telefoneFornecedor.Text;
-                f.id = int.Parse(textBox_idFornecedor.Text);
+                
                 
 
                 
@@ -60,6 +60,39 @@ namespace MiniErp2._0
 
             {
                 MessageBox.Show("error");
+            }
+
+
+
+        }
+
+        private void button_ConsultarFornecedores_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listView_Fornecedores.Items.Clear();
+
+                using (Contexto db = new Contexto())
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    List<Fornecedores> lista = db.fornecedor.ToList();
+                    foreach (Fornecedores f in lista)
+                    {
+                        ListViewItem item = new ListViewItem(f.id.ToString());
+                        item.SubItems.Add(f.nome);
+                        item.SubItems.Add(f.telefone);
+                        item.SubItems.Add(f.cnpj);
+                        listView_Fornecedores.Items.Add(item);
+                    }
+                }
+                Cursor.Current = Cursors.Default;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }

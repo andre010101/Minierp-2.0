@@ -30,8 +30,6 @@
         {
             this.button_ConsultarFornecedores = new System.Windows.Forms.Button();
             this.button_GravarFornecedor = new System.Windows.Forms.Button();
-            this.textBox_idFornecedor = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox_telefoneFornecedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_cnpjFornecedor = new System.Windows.Forms.TextBox();
@@ -44,48 +42,35 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView_Fornecedores = new System.Windows.Forms.DataGridView();
+            this.listView_Fornecedores = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fornecedores)).BeginInit();
             this.SuspendLayout();
             // 
             // button_ConsultarFornecedores
             // 
             this.button_ConsultarFornecedores.BackColor = System.Drawing.Color.Lavender;
-            this.button_ConsultarFornecedores.Location = new System.Drawing.Point(97, 282);
+            this.button_ConsultarFornecedores.Location = new System.Drawing.Point(104, 237);
             this.button_ConsultarFornecedores.Name = "button_ConsultarFornecedores";
             this.button_ConsultarFornecedores.Size = new System.Drawing.Size(75, 23);
             this.button_ConsultarFornecedores.TabIndex = 24;
             this.button_ConsultarFornecedores.Text = "Consultar";
             this.button_ConsultarFornecedores.UseVisualStyleBackColor = false;
+            this.button_ConsultarFornecedores.Click += new System.EventHandler(this.button_ConsultarFornecedores_Click);
             // 
             // button_GravarFornecedor
             // 
             this.button_GravarFornecedor.BackColor = System.Drawing.Color.Lavender;
-            this.button_GravarFornecedor.Location = new System.Drawing.Point(19, 282);
+            this.button_GravarFornecedor.Location = new System.Drawing.Point(23, 237);
             this.button_GravarFornecedor.Name = "button_GravarFornecedor";
             this.button_GravarFornecedor.Size = new System.Drawing.Size(75, 23);
             this.button_GravarFornecedor.TabIndex = 23;
             this.button_GravarFornecedor.Text = "Gravar";
             this.button_GravarFornecedor.UseVisualStyleBackColor = false;
             this.button_GravarFornecedor.Click += new System.EventHandler(this.button_GravarFornecedor_Click);
-            // 
-            // textBox_idFornecedor
-            // 
-            this.textBox_idFornecedor.Location = new System.Drawing.Point(23, 237);
-            this.textBox_idFornecedor.Name = "textBox_idFornecedor";
-            this.textBox_idFornecedor.PlaceholderText = "Digite o id do Fornecedor";
-            this.textBox_idFornecedor.Size = new System.Drawing.Size(149, 23);
-            this.textBox_idFornecedor.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 219);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Id Cliente";
             // 
             // textBox_telefoneFornecedor
             // 
@@ -185,17 +170,41 @@
             this.toolStripMenuItem5.Text = "Sair";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
-            // dataGridView_Fornecedores
+            // listView_Fornecedores
             // 
-            this.dataGridView_Fornecedores.AllowUserToAddRows = false;
-            this.dataGridView_Fornecedores.AllowUserToDeleteRows = false;
-            this.dataGridView_Fornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Fornecedores.Location = new System.Drawing.Point(203, 105);
-            this.dataGridView_Fornecedores.Name = "dataGridView_Fornecedores";
-            this.dataGridView_Fornecedores.ReadOnly = true;
-            this.dataGridView_Fornecedores.RowTemplate.Height = 25;
-            this.dataGridView_Fornecedores.Size = new System.Drawing.Size(524, 200);
-            this.dataGridView_Fornecedores.TabIndex = 25;
+            this.listView_Fornecedores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView_Fornecedores.FullRowSelect = true;
+            this.listView_Fornecedores.GridLines = true;
+            this.listView_Fornecedores.Location = new System.Drawing.Point(192, 105);
+            this.listView_Fornecedores.MultiSelect = false;
+            this.listView_Fornecedores.Name = "listView_Fornecedores";
+            this.listView_Fornecedores.Size = new System.Drawing.Size(360, 155);
+            this.listView_Fornecedores.TabIndex = 25;
+            this.listView_Fornecedores.UseCompatibleStateImageBehavior = false;
+            this.listView_Fornecedores.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "id Fornecedor";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "CNPJ";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Telefone";
+            this.columnHeader4.Width = 100;
             // 
             // Form_fornecedores
             // 
@@ -203,11 +212,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView_Fornecedores);
+            this.Controls.Add(this.listView_Fornecedores);
             this.Controls.Add(this.button_ConsultarFornecedores);
             this.Controls.Add(this.button_GravarFornecedor);
-            this.Controls.Add(this.textBox_idFornecedor);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_telefoneFornecedor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_cnpjFornecedor);
@@ -219,7 +226,6 @@
             this.Text = "Cadastro de Fornecedores";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fornecedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,8 +235,6 @@
 
         private Button button_ConsultarFornecedores;
         private Button button_GravarFornecedor;
-        private TextBox textBox_idFornecedor;
-        private Label label4;
         private TextBox textBox_telefoneFornecedor;
         private Label label3;
         private TextBox textBox_cnpjFornecedor;
@@ -243,6 +247,10 @@
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem toolStripMenuItem4;
         private ToolStripMenuItem toolStripMenuItem5;
-        private DataGridView dataGridView_Fornecedores;
+        private ListView listView_Fornecedores;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
     }
 }

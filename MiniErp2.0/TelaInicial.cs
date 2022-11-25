@@ -1,3 +1,5 @@
+using MiniErp2.DataModels;
+
 namespace MiniErp2._0
 {
     public partial class TelaInicial : Form
@@ -15,8 +17,8 @@ namespace MiniErp2._0
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            cadastroClientes frm = new cadastroClientes();
-            frm.Show();
+            Form_fornecedores frm = new Form_fornecedores();
+            frm.ShowDialog();
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
