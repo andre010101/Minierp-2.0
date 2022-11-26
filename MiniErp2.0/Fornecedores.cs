@@ -13,8 +13,7 @@ namespace MiniErp2.DataModels
         public string nome { get; set; }
         public string cnpj { get; set; }
         public string telefone { get; set; }
-        
-        
+        public virtual ICollection<Produtos> produto { get; set; }
 
     }
 }

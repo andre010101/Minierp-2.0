@@ -40,10 +40,6 @@ namespace MiniErp2._0
                 p.quantidade = int.Parse(textBox_quantidadeProduto.Text);
                 p.preco = int.Parse(textBox_prcoProduto.Text);
                 p.nome = textBox_NomeProduto.Text;
-
-
-
-
                 contexto.produtos.Add(p);
                 contexto.SaveChanges();
                 MessageBox.Show("Produto inserido com sucesso");

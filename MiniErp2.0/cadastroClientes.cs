@@ -17,12 +17,12 @@ namespace MiniErp2._0
     {
         public cadastroClientes()
         {
-            
+
             InitializeComponent();
         }
 
 
-      
+
         private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             TelaInicial frm = new TelaInicial();
@@ -32,7 +32,7 @@ namespace MiniErp2._0
         private void toolStripMenuItem5_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-          
+
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -54,23 +54,23 @@ namespace MiniErp2._0
                 Contexto contexto = new Contexto();
 
                 Clientes c = new Clientes();
-                
+
                 c.cpf = textBox_cpfCliente.Text;
                 c.telefone = textBox_telefoneCliente.Text;
                 c.nome = textBox_NomeCliente.Text;
-                
+
                 contexto.clientes.Add(c);
                 contexto.SaveChanges();
                 MessageBox.Show("Cliente inserida com sucesso");
-                
+
             }
             catch (Exception ex)
-            
-            
+
+
             {
                 MessageBox.Show("error");
             }
-            
+
         }
 
         private void button_ConsultarClientes_Click(object sender, EventArgs e)
@@ -103,6 +103,46 @@ namespace MiniErp2._0
             }
 
 
+        }
+
+        private void listView_Clientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //using (Contexto db = new Contexto())
+            //    if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //    {
+            //        int id = Convert.ToInt32(listView_Clientes.Items[e.index].Index["id"].FormattedValue.ToString());
+
+
+
+
+            //        MessageBox.Show("sucesso deletado");
+
+            //    }
+        }
+
+        private void button_DeletarClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contexto contexto = new Contexto();
+
+                Clientes c = new Clientes();
+                int id = int.Parse(textBox_deltarCliente.Text);
+                 contexto.clientes.Find(id);
+                //if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+                //{
+                    contexto.clientes.Remove(c);
+                    contexto.SaveChanges();
+                //}
+               
+                
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

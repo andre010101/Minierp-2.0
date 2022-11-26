@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -63,11 +64,17 @@ namespace MiniErp2._0.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     preco = table.Column<int>(type: "int", nullable: false),
-                    quantidade = table.Column<int>(type: "int", nullable: false)
+                    quantidade = table.Column<int>(type: "int", nullable: false),
+                    Fornecedoresid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_produtos", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_produtos_fornecedor_Fornecedoresid",
+                        column: x => x.Fornecedoresid,
+                        principalTable: "fornecedor",
+                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
@@ -76,9 +83,8 @@ namespace MiniErp2._0.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    idCliente = table.Column<int>(type: "int", nullable: false),
-                    idProduto = table.Column<int>(type: "int", nullable: false),
                     preco = table.Column<int>(type: "int", nullable: false),
+                    data = table.Column<DateTime>(type: "datetime2", nullable: false),
                     quantidade = table.Column<int>(type: "int", nullable: false),
                     clienteid = table.Column<int>(type: "int", nullable: false),
                     produtosid = table.Column<int>(type: "int", nullable: false),
@@ -118,14 +124,16 @@ namespace MiniErp2._0.Migrations
                 name: "IX_pedido_produtosid",
                 table: "pedido",
                 column: "produtosid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_produtos_Fornecedoresid",
+                table: "produtos",
+                column: "Fornecedoresid");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "fornecedor");
-
             migrationBuilder.DropTable(
                 name: "pedido");
 
@@ -137,6 +145,9 @@ namespace MiniErp2._0.Migrations
 
             migrationBuilder.DropTable(
                 name: "produtos");
+
+            migrationBuilder.DropTable(
+                name: "fornecedor");
         }
     }
 }
