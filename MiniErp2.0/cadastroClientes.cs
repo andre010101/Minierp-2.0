@@ -122,21 +122,23 @@ namespace MiniErp2._0
 
         private void button_DeletarClientes_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Contexto contexto = new Contexto();
+            try { 
 
-                Clientes c = new Clientes();
-                int id = int.Parse(textBox_deltarCliente.Text);
-                 contexto.clientes.Find(id);
-                //if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
 
-                //{
-                    contexto.clientes.Remove(c);
-                    contexto.SaveChanges();
-                //}
+                 Contexto contexto = new Contexto();
+            int id = int.Parse(textBox_deltarCliente.Text);
+            Clientes c = contexto.clientes.Find(id);
                
-                
+               
+             using (Contexto db = new Contexto())
+             if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+             {
+              contexto.clientes.Remove(c);
+              contexto.SaveChanges();
+             }
+               
+
+
 
             }
             catch (Exception ex)
