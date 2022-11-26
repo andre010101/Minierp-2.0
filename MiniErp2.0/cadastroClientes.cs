@@ -146,5 +146,14 @@ namespace MiniErp2._0
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            int i;
+            i = listView_Clientes.Items[0].Index;
+            textBox_NomeCliente.Text = listView_Clientes.Items[i].SubItems[1].Text.ToString();
+            textBox_cpfCliente.Text = listView_Clientes.Items[i].SubItems[2].Text.ToString();
+            textBox_telefoneCliente.Text = listView_Clientes.Items[i].SubItems[3].Text.ToString();
+        }
     }
 }

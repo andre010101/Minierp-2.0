@@ -49,6 +49,7 @@
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.button_DeletarClientes = new System.Windows.Forms.Button();
             this.textBox_deltarCliente = new System.Windows.Forms.TextBox();
+            this.button_editar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,12 +230,23 @@
             this.textBox_deltarCliente.Size = new System.Drawing.Size(100, 23);
             this.textBox_deltarCliente.TabIndex = 16;
             // 
+            // button_editar
+            // 
+            this.button_editar.Location = new System.Drawing.Point(468, 248);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(75, 23);
+            this.button_editar.TabIndex = 17;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
+            // 
             // cadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(824, 450);
+            this.Controls.Add(this.button_editar);
             this.Controls.Add(this.textBox_deltarCliente);
             this.Controls.Add(this.button_DeletarClientes);
             this.Controls.Add(this.listView_Clientes);
@@ -279,5 +291,6 @@
         private ColumnHeader columnHeader4;
         private Button button_DeletarClientes;
         private TextBox textBox_deltarCliente;
+        private Button button_editar;
     }
 }
