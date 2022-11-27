@@ -31,7 +31,6 @@
             this.button_ConsultarFornecedores = new System.Windows.Forms.Button();
             this.button_GravarFornecedor = new System.Windows.Forms.Button();
             this.textBox_idFornecedor = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox_quantidadeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_prcoProduto = new System.Windows.Forms.TextBox();
@@ -49,13 +48,14 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_ConsultarFornecedores
             // 
             this.button_ConsultarFornecedores.BackColor = System.Drawing.Color.Lavender;
-            this.button_ConsultarFornecedores.Location = new System.Drawing.Point(121, 272);
+            this.button_ConsultarFornecedores.Location = new System.Drawing.Point(114, 226);
             this.button_ConsultarFornecedores.Name = "button_ConsultarFornecedores";
             this.button_ConsultarFornecedores.Size = new System.Drawing.Size(75, 23);
             this.button_ConsultarFornecedores.TabIndex = 36;
@@ -66,7 +66,7 @@
             // button_GravarFornecedor
             // 
             this.button_GravarFornecedor.BackColor = System.Drawing.Color.Lavender;
-            this.button_GravarFornecedor.Location = new System.Drawing.Point(40, 272);
+            this.button_GravarFornecedor.Location = new System.Drawing.Point(40, 226);
             this.button_GravarFornecedor.Name = "button_GravarFornecedor";
             this.button_GravarFornecedor.Size = new System.Drawing.Size(75, 23);
             this.button_GravarFornecedor.TabIndex = 35;
@@ -76,20 +76,11 @@
             // 
             // textBox_idFornecedor
             // 
-            this.textBox_idFornecedor.Location = new System.Drawing.Point(40, 227);
+            this.textBox_idFornecedor.Location = new System.Drawing.Point(225, 246);
             this.textBox_idFornecedor.Name = "textBox_idFornecedor";
             this.textBox_idFornecedor.PlaceholderText = "Digite o id do Fornecedor";
             this.textBox_idFornecedor.Size = new System.Drawing.Size(149, 23);
             this.textBox_idFornecedor.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Id Cliente";
             // 
             // textBox_quantidadeProduto
             // 
@@ -197,7 +188,7 @@
             this.columnHeader4});
             this.listView_Produtos.FullRowSelect = true;
             this.listView_Produtos.GridLines = true;
-            this.listView_Produtos.Location = new System.Drawing.Point(231, 81);
+            this.listView_Produtos.Location = new System.Drawing.Point(225, 63);
             this.listView_Produtos.MultiSelect = false;
             this.listView_Produtos.Name = "listView_Produtos";
             this.listView_Produtos.Size = new System.Drawing.Size(290, 165);
@@ -222,17 +213,26 @@
             // 
             this.columnHeader4.Text = "Quanidade";
             // 
+            // button
+            // 
+            this.button.Location = new System.Drawing.Point(225, 275);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(75, 23);
+            this.button.TabIndex = 38;
+            this.button.Text = "button1";
+            this.button.UseVisualStyleBackColor = true;
+            // 
             // cadastroDeProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.listView_Produtos);
             this.Controls.Add(this.button_ConsultarFornecedores);
             this.Controls.Add(this.button_GravarFornecedor);
             this.Controls.Add(this.textBox_idFornecedor);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_quantidadeProduto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_prcoProduto);
@@ -253,7 +253,6 @@
         private Button button_ConsultarFornecedores;
         private Button button_GravarFornecedor;
         private TextBox textBox_idFornecedor;
-        private Label label4;
         private TextBox textBox_quantidadeProduto;
         private Label label3;
         private TextBox textBox_prcoProduto;
@@ -271,5 +270,6 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Button button;
     }
 }

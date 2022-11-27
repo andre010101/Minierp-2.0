@@ -52,6 +52,8 @@
             this.button_editarFornecedores = new System.Windows.Forms.Button();
             this.textBox_updateFornecedor = new System.Windows.Forms.TextBox();
             this.button_update = new System.Windows.Forms.Button();
+            this.textBox_filtrarFornecedores = new System.Windows.Forms.TextBox();
+            this.button_FiltrarFornecedor = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,7 +189,7 @@
             this.listView_Fornecedores.Location = new System.Drawing.Point(192, 105);
             this.listView_Fornecedores.MultiSelect = false;
             this.listView_Fornecedores.Name = "listView_Fornecedores";
-            this.listView_Fornecedores.Size = new System.Drawing.Size(335, 155);
+            this.listView_Fornecedores.Size = new System.Drawing.Size(365, 155);
             this.listView_Fornecedores.TabIndex = 25;
             this.listView_Fornecedores.UseCompatibleStateImageBehavior = false;
             this.listView_Fornecedores.View = System.Windows.Forms.View.Details;
@@ -231,7 +233,7 @@
             // 
             // button_editarFornecedores
             // 
-            this.button_editarFornecedores.Location = new System.Drawing.Point(440, 312);
+            this.button_editarFornecedores.Location = new System.Drawing.Point(418, 295);
             this.button_editarFornecedores.Name = "button_editarFornecedores";
             this.button_editarFornecedores.Size = new System.Drawing.Size(75, 23);
             this.button_editarFornecedores.TabIndex = 28;
@@ -241,7 +243,7 @@
             // 
             // textBox_updateFornecedor
             // 
-            this.textBox_updateFornecedor.Location = new System.Drawing.Point(440, 283);
+            this.textBox_updateFornecedor.Location = new System.Drawing.Point(418, 266);
             this.textBox_updateFornecedor.Name = "textBox_updateFornecedor";
             this.textBox_updateFornecedor.PlaceholderText = "digite o id do fornecedor";
             this.textBox_updateFornecedor.Size = new System.Drawing.Size(139, 23);
@@ -249,7 +251,7 @@
             // 
             // button_update
             // 
-            this.button_update.Location = new System.Drawing.Point(521, 312);
+            this.button_update.Location = new System.Drawing.Point(499, 295);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(75, 23);
             this.button_update.TabIndex = 30;
@@ -257,12 +259,32 @@
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
+            // textBox_filtrarFornecedores
+            // 
+            this.textBox_filtrarFornecedores.Location = new System.Drawing.Point(563, 105);
+            this.textBox_filtrarFornecedores.Name = "textBox_filtrarFornecedores";
+            this.textBox_filtrarFornecedores.PlaceholderText = "digite o id do fornecedor";
+            this.textBox_filtrarFornecedores.Size = new System.Drawing.Size(139, 23);
+            this.textBox_filtrarFornecedores.TabIndex = 31;
+            // 
+            // button_FiltrarFornecedor
+            // 
+            this.button_FiltrarFornecedor.Location = new System.Drawing.Point(563, 134);
+            this.button_FiltrarFornecedor.Name = "button_FiltrarFornecedor";
+            this.button_FiltrarFornecedor.Size = new System.Drawing.Size(139, 23);
+            this.button_FiltrarFornecedor.TabIndex = 32;
+            this.button_FiltrarFornecedor.Text = "Filtar";
+            this.button_FiltrarFornecedor.UseVisualStyleBackColor = true;
+            this.button_FiltrarFornecedor.Click += new System.EventHandler(this.button_FiltrarFornecedor_Click);
+            // 
             // Form_fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_FiltrarFornecedor);
+            this.Controls.Add(this.textBox_filtrarFornecedores);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.textBox_updateFornecedor);
             this.Controls.Add(this.button_editarFornecedores);
@@ -313,5 +335,7 @@
         private Button button_editarFornecedores;
         private TextBox textBox_updateFornecedor;
         private Button button_update;
+        private TextBox textBox_filtrarFornecedores;
+        private Button button_FiltrarFornecedor;
     }
 }

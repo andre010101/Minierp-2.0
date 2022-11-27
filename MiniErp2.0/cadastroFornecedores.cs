@@ -34,7 +34,6 @@ namespace MiniErp2._0
             cadastroClientes frm = new cadastroClientes();
             frm.Show();
         }
-
         private void button_GravarFornecedor_Click(object sender, EventArgs e)
         {
             try
@@ -46,10 +45,7 @@ namespace MiniErp2._0
                 f.cnpj = textBox_cnpjFornecedor.Text;
                 f.nome = textBox_NomeFornecedor.Text;
                 f.telefone = textBox_telefoneFornecedor.Text;
-                
-                
-
-                
+                               
                 contexto.fornecedor.Add(f);
                 contexto.SaveChanges();
                 MessageBox.Show("fornecedor inserida com sucesso");
@@ -61,9 +57,6 @@ namespace MiniErp2._0
             {
                 MessageBox.Show("error");
             }
-
-
-
         }
 
         private void button_ConsultarFornecedores_Click(object sender, EventArgs e)
@@ -88,8 +81,6 @@ namespace MiniErp2._0
                 }
                 Cursor.Current = Cursors.Default;
 
-
-
             }
             catch (Exception ex)
             {
@@ -101,8 +92,6 @@ namespace MiniErp2._0
         {
             try
             {
-
-
                 Contexto contexto = new Contexto();
                 int id = int.Parse(textBox_deletar.Text);
                 Fornecedores f = contexto.fornecedor.Find(id);
@@ -114,17 +103,12 @@ namespace MiniErp2._0
                         contexto.fornecedor.Remove(f);
                         contexto.SaveChanges();
                     }
-
-
-
-
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
-
         private void button_editarFornecedores_Click(object sender, EventArgs e)
         {
             int i;
@@ -133,7 +117,6 @@ namespace MiniErp2._0
             textBox_cnpjFornecedor.Text = listView_Fornecedores.Items[i].SubItems[2].Text.ToString();
             textBox_telefoneFornecedor.Text = listView_Fornecedores.Items[i].SubItems[3].Text.ToString();
         }
-
         private void button_update_Click(object sender, EventArgs e)
         {
             try
@@ -148,9 +131,6 @@ namespace MiniErp2._0
 
                 if (MessageBox.Show("Você Realmente deseja alterar?", "Alterar Fornecedores", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-
-
-
                     contexto.fornecedor.Update(f);
                     contexto.SaveChanges();
                     MessageBox.Show("Fornecedor alterado com sucesso");
@@ -158,10 +138,36 @@ namespace MiniErp2._0
                 listView_Fornecedores.Items.Clear();
             }
             catch (Exception ex)
-
-
             {
                 MessageBox.Show("error");
+            }
+        }
+
+        private void button_FiltrarFornecedor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_filtrarFornecedores.Text);
+                Fornecedores f = contexto.fornecedor.Find(id);
+
+
+                using (Contexto db = new Contexto())
+                    if (MessageBox.Show("Você Realmente deseja Realizar o filtro?", "Filtrando Fornecedores", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        listView_Fornecedores.Items.Clear();
+                        ListViewItem item = new ListViewItem(f.id.ToString());
+                        item.SubItems.Add(f.nome);
+                        item.SubItems.Add(f.cnpj);
+                        item.SubItems.Add(f.telefone);
+                        listView_Fornecedores.Items.Add(item);
+                    }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
