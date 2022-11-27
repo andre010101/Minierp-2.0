@@ -54,14 +54,14 @@ namespace MiniErp2._0
                 Contexto contexto = new Contexto();
 
                 Clientes c = new Clientes();
-
+                c.nome = textBox_NomeCliente.Text;
                 c.cpf = textBox_cpfCliente.Text;
                 c.telefone = textBox_telefoneCliente.Text;
-                c.nome = textBox_NomeCliente.Text;
+               
 
                 contexto.clientes.Add(c);
                 contexto.SaveChanges();
-                MessageBox.Show("Cliente inserida com sucesso");
+                MessageBox.Show("Cliente inserido com sucesso");
 
             }
             catch (Exception ex)
@@ -87,8 +87,8 @@ namespace MiniErp2._0
                     {
                         ListViewItem item = new ListViewItem(c.id.ToString());
                         item.SubItems.Add(c.nome);
-                        item.SubItems.Add(c.telefone);
                         item.SubItems.Add(c.cpf);
+                        item.SubItems.Add(c.telefone);
                         listView_Clientes.Items.Add(item);
                     }
                 }
@@ -122,21 +122,22 @@ namespace MiniErp2._0
 
         private void button_DeletarClientes_Click(object sender, EventArgs e)
         {
-            try { 
+            try
+            {
 
 
-                 Contexto contexto = new Contexto();
-            int id = int.Parse(textBox_deltarCliente.Text);
-            Clientes c = contexto.clientes.Find(id);
-               
-               
-             using (Contexto db = new Contexto())
-             if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
-             {
-              contexto.clientes.Remove(c);
-              contexto.SaveChanges();
-             }
-               
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_deltarCliente.Text);
+                Clientes c = contexto.clientes.Find(id);
+
+
+                using (Contexto db = new Contexto())
+                    if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        contexto.clientes.Remove(c);
+                        contexto.SaveChanges();
+                    }
+
 
 
 
@@ -147,13 +148,54 @@ namespace MiniErp2._0
             }
         }
 
-        private void button_editar_Click(object sender, EventArgs e)
+       
+
+        private void button_Updat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(textBox_idup.Text);
+                //Clientes c = new Clientes();
+                Contexto contexto = new Contexto();
+                Clientes c = contexto.clientes.Find(id);
+                c.nome = textBox_NomeCliente.Text;
+                c.telefone = textBox_telefoneCliente.Text;
+                c.cpf = textBox_cpfCliente.Text;
+
+                if (MessageBox.Show("Você Realmente deseja alterar?", "Alterar Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    
+
+                   
+                    contexto.clientes.Update(c);
+                    contexto.SaveChanges();
+                    MessageBox.Show("Cliente alterado com sucesso");
+                }
+                listView_Clientes.Items.Clear();
+            }
+            catch (Exception ex)
+
+
+            {
+                MessageBox.Show("error");
+            }
+
+        }
+
+        private void button_editar_Click_1(object sender, EventArgs e)
         {
             int i;
-            i = listView_Clientes.Items[0].Index;
+            i = listView_Clientes.SelectedItems[0].Index;
             textBox_NomeCliente.Text = listView_Clientes.Items[i].SubItems[1].Text.ToString();
             textBox_cpfCliente.Text = listView_Clientes.Items[i].SubItems[2].Text.ToString();
             textBox_telefoneCliente.Text = listView_Clientes.Items[i].SubItems[3].Text.ToString();
+        }
+
+        private void button_FiltarCliente_Click(object sender, EventArgs e)
+        {IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+            int idFiltro = int.Parse(textBox_FiltrarClientes.Text);
+            Clientes c = Contexto.clie.FirstOrDefault(Clientes => Clientes.id == idFiltro);
+
         }
     }
 }
