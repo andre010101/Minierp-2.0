@@ -67,8 +67,9 @@ namespace MiniErp2._0
                     {
                         ListViewItem item = new ListViewItem(p.id.ToString());
                         item.SubItems.Add(p.nome);
-                        item.SubItems.Add(p.quantidade.ToString());
                         item.SubItems.Add(p.preco.ToString());
+                        item.SubItems.Add(p.quantidade.ToString());
+                       
                         listView_Produtos.Items.Add(item);
                     }
                 }
@@ -99,6 +100,46 @@ namespace MiniErp2._0
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            int i;
+            i = listView_Produtos.SelectedItems[0].Index;
+            textBox_NomeProduto.Text = listView_Produtos.Items[i].SubItems[1].Text.ToString();
+            textBox_prcoProduto.Text = listView_Produtos.Items[i].SubItems[2].Text.ToString();
+            textBox_quantidadeProduto.Text = listView_Produtos.Items[i].SubItems[3].Text.ToString();
+        }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(textBox_update.Text);
+
+                Contexto contexto = new Contexto();
+                Produtos p = contexto.produtos.Find(id);
+                p.nome = textBox_NomeProduto.Text;
+                p.preco = int.Parse(textBox_prcoProduto.Text);
+                p.quantidade = int.Parse(textBox_quantidadeProduto.Text);
+
+                if (MessageBox.Show("Você Realmente deseja alterar?", "Alterar Produto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+
+
+                    contexto.produtos.Update(p);
+                    contexto.SaveChanges();
+                    MessageBox.Show("Produto alterado com sucesso");
+                }
+                listView_Produtos.Items.Clear();
+            }
+            catch (Exception ex)
+
+
+            {
+                MessageBox.Show("error");
             }
         }
     }

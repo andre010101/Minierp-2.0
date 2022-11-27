@@ -49,6 +49,9 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.button_DeletarProduto = new System.Windows.Forms.Button();
+            this.button_editar = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
+            this.textBox_update = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,7 +194,7 @@
             this.listView_Produtos.Location = new System.Drawing.Point(225, 63);
             this.listView_Produtos.MultiSelect = false;
             this.listView_Produtos.Name = "listView_Produtos";
-            this.listView_Produtos.Size = new System.Drawing.Size(290, 165);
+            this.listView_Produtos.Size = new System.Drawing.Size(338, 165);
             this.listView_Produtos.TabIndex = 37;
             this.listView_Produtos.UseCompatibleStateImageBehavior = false;
             this.listView_Produtos.View = System.Windows.Forms.View.Details;
@@ -223,12 +226,43 @@
             this.button_DeletarProduto.UseVisualStyleBackColor = true;
             this.button_DeletarProduto.Click += new System.EventHandler(this.button_DeletarProduto_Click);
             // 
+            // button_editar
+            // 
+            this.button_editar.Location = new System.Drawing.Point(407, 263);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(75, 23);
+            this.button_editar.TabIndex = 39;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
+            // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(488, 263);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(75, 23);
+            this.button_update.TabIndex = 40;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            // 
+            // textBox_update
+            // 
+            this.textBox_update.Location = new System.Drawing.Point(414, 234);
+            this.textBox_update.Name = "textBox_update";
+            this.textBox_update.PlaceholderText = "Digite o id do Fornecedor";
+            this.textBox_update.Size = new System.Drawing.Size(149, 23);
+            this.textBox_update.TabIndex = 41;
+            // 
             // cadastroDeProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_update);
+            this.Controls.Add(this.button_update);
+            this.Controls.Add(this.button_editar);
             this.Controls.Add(this.button_DeletarProduto);
             this.Controls.Add(this.listView_Produtos);
             this.Controls.Add(this.button_ConsultarFornecedores);
@@ -272,5 +306,8 @@
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private Button button_DeletarProduto;
+        private Button button_editar;
+        private Button button_update;
+        private TextBox textBox_update;
     }
 }

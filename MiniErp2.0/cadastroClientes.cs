@@ -142,7 +142,7 @@ namespace MiniErp2._0
             try
             {
                 int id = int.Parse(textBox_idup.Text);
-                //Clientes c = new Clientes();
+                
                 Contexto contexto = new Contexto();
                 Clientes c = contexto.clientes.Find(id);
                 c.nome = textBox_NomeCliente.Text;
