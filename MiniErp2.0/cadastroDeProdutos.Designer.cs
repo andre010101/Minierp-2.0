@@ -30,7 +30,7 @@
         {
             this.button_ConsultarFornecedores = new System.Windows.Forms.Button();
             this.button_GravarFornecedor = new System.Windows.Forms.Button();
-            this.textBox_idFornecedor = new System.Windows.Forms.TextBox();
+            this.textBox_idFornecedordeletar = new System.Windows.Forms.TextBox();
             this.textBox_quantidadeProduto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_prcoProduto = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.button = new System.Windows.Forms.Button();
+            this.button_DeletarProduto = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,13 +74,13 @@
             this.button_GravarFornecedor.UseVisualStyleBackColor = false;
             this.button_GravarFornecedor.Click += new System.EventHandler(this.button_GravarFornecedor_Click);
             // 
-            // textBox_idFornecedor
+            // textBox_idFornecedordeletar
             // 
-            this.textBox_idFornecedor.Location = new System.Drawing.Point(225, 246);
-            this.textBox_idFornecedor.Name = "textBox_idFornecedor";
-            this.textBox_idFornecedor.PlaceholderText = "Digite o id do Fornecedor";
-            this.textBox_idFornecedor.Size = new System.Drawing.Size(149, 23);
-            this.textBox_idFornecedor.TabIndex = 34;
+            this.textBox_idFornecedordeletar.Location = new System.Drawing.Point(225, 234);
+            this.textBox_idFornecedordeletar.Name = "textBox_idFornecedordeletar";
+            this.textBox_idFornecedordeletar.PlaceholderText = "Digite o id do Fornecedor";
+            this.textBox_idFornecedordeletar.Size = new System.Drawing.Size(149, 23);
+            this.textBox_idFornecedordeletar.TabIndex = 34;
             // 
             // textBox_quantidadeProduto
             // 
@@ -213,14 +213,15 @@
             // 
             this.columnHeader4.Text = "Quanidade";
             // 
-            // button
+            // button_DeletarProduto
             // 
-            this.button.Location = new System.Drawing.Point(225, 275);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(75, 23);
-            this.button.TabIndex = 38;
-            this.button.Text = "button1";
-            this.button.UseVisualStyleBackColor = true;
+            this.button_DeletarProduto.Location = new System.Drawing.Point(225, 263);
+            this.button_DeletarProduto.Name = "button_DeletarProduto";
+            this.button_DeletarProduto.Size = new System.Drawing.Size(75, 23);
+            this.button_DeletarProduto.TabIndex = 38;
+            this.button_DeletarProduto.Text = "Deletar";
+            this.button_DeletarProduto.UseVisualStyleBackColor = true;
+            this.button_DeletarProduto.Click += new System.EventHandler(this.button_DeletarProduto_Click);
             // 
             // cadastroDeProdutos
             // 
@@ -228,11 +229,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button);
+            this.Controls.Add(this.button_DeletarProduto);
             this.Controls.Add(this.listView_Produtos);
             this.Controls.Add(this.button_ConsultarFornecedores);
             this.Controls.Add(this.button_GravarFornecedor);
-            this.Controls.Add(this.textBox_idFornecedor);
+            this.Controls.Add(this.textBox_idFornecedordeletar);
             this.Controls.Add(this.textBox_quantidadeProduto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_prcoProduto);
@@ -252,7 +253,7 @@
         #endregion
         private Button button_ConsultarFornecedores;
         private Button button_GravarFornecedor;
-        private TextBox textBox_idFornecedor;
+        private TextBox textBox_idFornecedordeletar;
         private TextBox textBox_quantidadeProduto;
         private Label label3;
         private TextBox textBox_prcoProduto;
@@ -270,6 +271,6 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
-        private Button button;
+        private Button button_DeletarProduto;
     }
 }

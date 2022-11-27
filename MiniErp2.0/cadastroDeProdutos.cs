@@ -82,5 +82,24 @@ namespace MiniErp2._0
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button_DeletarProduto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_idFornecedordeletar.Text);
+                Produtos p = contexto.produtos.Find(id);
+                    if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Produto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        contexto.produtos.Remove(p);
+                        contexto.SaveChanges();
+                    }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
