@@ -199,12 +199,6 @@ namespace MiniErp2._0
                         item.SubItems.Add(c.telefone);
                         listView_Clientes.Items.Add(item);
                     }
-               
-
-
-
-
-
             }
             catch (Exception ex)
             {

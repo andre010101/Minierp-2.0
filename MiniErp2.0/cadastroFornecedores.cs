@@ -80,8 +80,9 @@ namespace MiniErp2._0
                     {
                         ListViewItem item = new ListViewItem(f.id.ToString());
                         item.SubItems.Add(f.nome);
-                        item.SubItems.Add(f.telefone);
                         item.SubItems.Add(f.cnpj);
+                        item.SubItems.Add(f.telefone);
+                        
                         listView_Fornecedores.Items.Add(item);
                     }
                 }
@@ -131,6 +132,37 @@ namespace MiniErp2._0
             textBox_NomeFornecedor.Text = listView_Fornecedores.Items[i].SubItems[1].Text.ToString();
             textBox_cnpjFornecedor.Text = listView_Fornecedores.Items[i].SubItems[2].Text.ToString();
             textBox_telefoneFornecedor.Text = listView_Fornecedores.Items[i].SubItems[3].Text.ToString();
+        }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(textBox_updateFornecedor.Text);
+               
+                Contexto contexto = new Contexto();
+                Fornecedores f = contexto.fornecedor.Find(id);
+                f.nome = textBox_NomeFornecedor.Text;
+                f.telefone = textBox_telefoneFornecedor.Text;
+                f.cnpj = textBox_cnpjFornecedor.Text;
+
+                if (MessageBox.Show("Você Realmente deseja alterar?", "Alterar Fornecedores", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+
+
+                    contexto.fornecedor.Update(f);
+                    contexto.SaveChanges();
+                    MessageBox.Show("Fornecedor alterado com sucesso");
+                }
+                listView_Fornecedores.Items.Clear();
+            }
+            catch (Exception ex)
+
+
+            {
+                MessageBox.Show("error");
+            }
         }
     }
 }

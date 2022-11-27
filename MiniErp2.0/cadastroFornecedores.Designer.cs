@@ -50,6 +50,8 @@
             this.button_deletar = new System.Windows.Forms.Button();
             this.textBox_deletar = new System.Windows.Forms.TextBox();
             this.button_editarFornecedores = new System.Windows.Forms.Button();
+            this.textBox_updateFornecedor = new System.Windows.Forms.TextBox();
+            this.button_update = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,7 +231,7 @@
             // 
             // button_editarFornecedores
             // 
-            this.button_editarFornecedores.Location = new System.Drawing.Point(452, 266);
+            this.button_editarFornecedores.Location = new System.Drawing.Point(440, 312);
             this.button_editarFornecedores.Name = "button_editarFornecedores";
             this.button_editarFornecedores.Size = new System.Drawing.Size(75, 23);
             this.button_editarFornecedores.TabIndex = 28;
@@ -237,12 +239,32 @@
             this.button_editarFornecedores.UseVisualStyleBackColor = true;
             this.button_editarFornecedores.Click += new System.EventHandler(this.button_editarFornecedores_Click);
             // 
+            // textBox_updateFornecedor
+            // 
+            this.textBox_updateFornecedor.Location = new System.Drawing.Point(440, 283);
+            this.textBox_updateFornecedor.Name = "textBox_updateFornecedor";
+            this.textBox_updateFornecedor.PlaceholderText = "digite o id do fornecedor";
+            this.textBox_updateFornecedor.Size = new System.Drawing.Size(139, 23);
+            this.textBox_updateFornecedor.TabIndex = 29;
+            // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(521, 312);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(75, 23);
+            this.button_update.TabIndex = 30;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            // 
             // Form_fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_update);
+            this.Controls.Add(this.textBox_updateFornecedor);
             this.Controls.Add(this.button_editarFornecedores);
             this.Controls.Add(this.textBox_deletar);
             this.Controls.Add(this.button_deletar);
@@ -289,5 +311,7 @@
         private Button button_deletar;
         private TextBox textBox_deletar;
         private Button button_editarFornecedores;
+        private TextBox textBox_updateFornecedor;
+        private Button button_update;
     }
 }
