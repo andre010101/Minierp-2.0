@@ -102,5 +102,24 @@ namespace MiniErp2._0
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button_DeletarNotas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_deletarNota.Text);
+                Notas n = contexto.notas.Find(id);
+                if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Nota", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    contexto.notas.Remove(n);
+                    contexto.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

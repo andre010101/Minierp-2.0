@@ -32,7 +32,7 @@
             this.button_GravarNotas = new System.Windows.Forms.Button();
             this.textBox_total = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_QuantidadeNota = new System.Windows.Forms.TextBox();
+            this.textBox_deletarNota = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_NfNumero = new System.Windows.Forms.TextBox();
             this.NF = new System.Windows.Forms.Label();
@@ -49,13 +49,14 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.button_DeletarNotas = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_ConsultarNotas
             // 
             this.button_ConsultarNotas.BackColor = System.Drawing.Color.Lavender;
-            this.button_ConsultarNotas.Location = new System.Drawing.Point(105, 276);
+            this.button_ConsultarNotas.Location = new System.Drawing.Point(105, 213);
             this.button_ConsultarNotas.Name = "button_ConsultarNotas";
             this.button_ConsultarNotas.Size = new System.Drawing.Size(75, 23);
             this.button_ConsultarNotas.TabIndex = 24;
@@ -66,7 +67,7 @@
             // button_GravarNotas
             // 
             this.button_GravarNotas.BackColor = System.Drawing.Color.Lavender;
-            this.button_GravarNotas.Location = new System.Drawing.Point(24, 276);
+            this.button_GravarNotas.Location = new System.Drawing.Point(24, 213);
             this.button_GravarNotas.Name = "button_GravarNotas";
             this.button_GravarNotas.Size = new System.Drawing.Size(75, 23);
             this.button_GravarNotas.TabIndex = 23;
@@ -91,18 +92,18 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Total";
             // 
-            // textBox_QuantidadeNota
+            // textBox_deletarNota
             // 
-            this.textBox_QuantidadeNota.Location = new System.Drawing.Point(294, 306);
-            this.textBox_QuantidadeNota.Name = "textBox_QuantidadeNota";
-            this.textBox_QuantidadeNota.PlaceholderText = "quantidade da nota";
-            this.textBox_QuantidadeNota.Size = new System.Drawing.Size(149, 23);
-            this.textBox_QuantidadeNota.TabIndex = 19;
+            this.textBox_deletarNota.Location = new System.Drawing.Point(246, 239);
+            this.textBox_deletarNota.Name = "textBox_deletarNota";
+            this.textBox_deletarNota.PlaceholderText = "digite o id da nota";
+            this.textBox_deletarNota.Size = new System.Drawing.Size(149, 23);
+            this.textBox_deletarNota.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 288);
+            this.label3.Location = new System.Drawing.Point(246, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 18;
@@ -201,7 +202,7 @@
             this.columnHeader4});
             this.listView_Notas.FullRowSelect = true;
             this.listView_Notas.GridLines = true;
-            this.listView_Notas.Location = new System.Drawing.Point(250, 84);
+            this.listView_Notas.Location = new System.Drawing.Point(235, 84);
             this.listView_Notas.MultiSelect = false;
             this.listView_Notas.Name = "listView_Notas";
             this.listView_Notas.Size = new System.Drawing.Size(437, 120);
@@ -227,18 +228,29 @@
             this.columnHeader4.Text = "Total";
             this.columnHeader4.Width = 50;
             // 
+            // button_DeletarNotas
+            // 
+            this.button_DeletarNotas.Location = new System.Drawing.Point(246, 268);
+            this.button_DeletarNotas.Name = "button_DeletarNotas";
+            this.button_DeletarNotas.Size = new System.Drawing.Size(66, 22);
+            this.button_DeletarNotas.TabIndex = 26;
+            this.button_DeletarNotas.Text = "Deletar";
+            this.button_DeletarNotas.UseVisualStyleBackColor = true;
+            this.button_DeletarNotas.Click += new System.EventHandler(this.button_DeletarNotas_Click);
+            // 
             // CadastrarNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_DeletarNotas);
             this.Controls.Add(this.listView_Notas);
             this.Controls.Add(this.button_ConsultarNotas);
             this.Controls.Add(this.button_GravarNotas);
             this.Controls.Add(this.textBox_total);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_QuantidadeNota);
+            this.Controls.Add(this.textBox_deletarNota);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_NfNumero);
             this.Controls.Add(this.NF);
@@ -260,7 +272,7 @@
         private Button button_GravarNotas;
         private TextBox textBox_total;
         private Label label4;
-        private TextBox textBox_QuantidadeNota;
+        private TextBox textBox_deletarNota;
         private Label label3;
         private TextBox textBox_NfNumero;
         private Label NF;
@@ -277,5 +289,6 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Button button_DeletarNotas;
     }
 }
