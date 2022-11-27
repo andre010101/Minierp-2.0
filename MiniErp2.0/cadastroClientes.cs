@@ -105,20 +105,7 @@ namespace MiniErp2._0
 
         }
 
-        private void listView_Clientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //using (Contexto db = new Contexto())
-            //    if (MessageBox.Show("Você Realmente deseja deletar?", "Delete Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //    {
-            //        int id = Convert.ToInt32(listView_Clientes.Items[e.index].Index["id"].FormattedValue.ToString());
-
-
-
-
-            //        MessageBox.Show("sucesso deletado");
-
-            //    }
-        }
+        
 
         private void button_DeletarClientes_Click(object sender, EventArgs e)
         {

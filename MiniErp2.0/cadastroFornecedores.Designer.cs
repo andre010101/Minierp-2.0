@@ -47,6 +47,8 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.button_deletar = new System.Windows.Forms.Button();
+            this.textBox_deletar = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,12 +208,32 @@
             this.columnHeader4.Text = "Telefone";
             this.columnHeader4.Width = 100;
             // 
+            // button_deletar
+            // 
+            this.button_deletar.Location = new System.Drawing.Point(192, 266);
+            this.button_deletar.Name = "button_deletar";
+            this.button_deletar.Size = new System.Drawing.Size(75, 23);
+            this.button_deletar.TabIndex = 26;
+            this.button_deletar.Text = "Deletar";
+            this.button_deletar.UseVisualStyleBackColor = true;
+            this.button_deletar.Click += new System.EventHandler(this.button_deletar_Click);
+            // 
+            // textBox_deletar
+            // 
+            this.textBox_deletar.Location = new System.Drawing.Point(273, 266);
+            this.textBox_deletar.Name = "textBox_deletar";
+            this.textBox_deletar.PlaceholderText = "digite o id do fornecedor";
+            this.textBox_deletar.Size = new System.Drawing.Size(139, 23);
+            this.textBox_deletar.TabIndex = 27;
+            // 
             // Form_fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_deletar);
+            this.Controls.Add(this.button_deletar);
             this.Controls.Add(this.listView_Fornecedores);
             this.Controls.Add(this.button_ConsultarFornecedores);
             this.Controls.Add(this.button_GravarFornecedor);
@@ -252,5 +274,7 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Button button_deletar;
+        private TextBox textBox_deletar;
     }
 }
