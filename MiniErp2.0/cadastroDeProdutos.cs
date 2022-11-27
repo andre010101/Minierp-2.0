@@ -142,5 +142,32 @@ namespace MiniErp2._0
                 MessageBox.Show("error");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_FiltrarProduto.Text);
+                Produtos p = contexto.produtos.Find(id);
+
+
+                using (Contexto db = new Contexto())
+                    if (MessageBox.Show("Você Realmente deseja Realizar o filtro?", "Filtrando Produto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        listView_Produtos.Items.Clear();
+                        ListViewItem item = new ListViewItem(p.id.ToString());
+                        item.SubItems.Add(p.nome);
+                        item.SubItems.Add(p.preco.ToString());
+                        item.SubItems.Add(p.quantidade.ToString());
+                        listView_Produtos.Items.Add(item);
+                    }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

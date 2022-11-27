@@ -52,6 +52,8 @@
             this.button_editar = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
             this.textBox_update = new System.Windows.Forms.TextBox();
+            this.textBox_FiltrarProduto = new System.Windows.Forms.TextBox();
+            this.button_Filtrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // 
             this.textBox_idFornecedordeletar.Location = new System.Drawing.Point(225, 234);
             this.textBox_idFornecedordeletar.Name = "textBox_idFornecedordeletar";
-            this.textBox_idFornecedordeletar.PlaceholderText = "Digite o id do Fornecedor";
+            this.textBox_idFornecedordeletar.PlaceholderText = "Digite o id do Produto";
             this.textBox_idFornecedordeletar.Size = new System.Drawing.Size(149, 23);
             this.textBox_idFornecedordeletar.TabIndex = 34;
             // 
@@ -123,7 +125,7 @@
             // 
             this.textBox_NomeProduto.Location = new System.Drawing.Point(40, 81);
             this.textBox_NomeProduto.Name = "textBox_NomeProduto";
-            this.textBox_NomeProduto.PlaceholderText = "Digite o nome do Fornecedor";
+            this.textBox_NomeProduto.PlaceholderText = "Digite o nome do Produto";
             this.textBox_NomeProduto.Size = new System.Drawing.Size(149, 23);
             this.textBox_NomeProduto.TabIndex = 28;
             // 
@@ -254,12 +256,32 @@
             this.textBox_update.Size = new System.Drawing.Size(149, 23);
             this.textBox_update.TabIndex = 41;
             // 
+            // textBox_FiltrarProduto
+            // 
+            this.textBox_FiltrarProduto.Location = new System.Drawing.Point(569, 63);
+            this.textBox_FiltrarProduto.Name = "textBox_FiltrarProduto";
+            this.textBox_FiltrarProduto.PlaceholderText = "Digite o id do Produto";
+            this.textBox_FiltrarProduto.Size = new System.Drawing.Size(149, 23);
+            this.textBox_FiltrarProduto.TabIndex = 42;
+            // 
+            // button_Filtrar
+            // 
+            this.button_Filtrar.Location = new System.Drawing.Point(569, 92);
+            this.button_Filtrar.Name = "button_Filtrar";
+            this.button_Filtrar.Size = new System.Drawing.Size(75, 23);
+            this.button_Filtrar.TabIndex = 43;
+            this.button_Filtrar.Text = "Filtar";
+            this.button_Filtrar.UseVisualStyleBackColor = true;
+            this.button_Filtrar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cadastroDeProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Filtrar);
+            this.Controls.Add(this.textBox_FiltrarProduto);
             this.Controls.Add(this.textBox_update);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.button_editar);
@@ -309,5 +331,7 @@
         private Button button_editar;
         private Button button_update;
         private TextBox textBox_update;
+        private TextBox textBox_FiltrarProduto;
+        private Button button_Filtrar;
     }
 }
