@@ -49,6 +49,7 @@
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.button_deletar = new System.Windows.Forms.Button();
             this.textBox_deletar = new System.Windows.Forms.TextBox();
+            this.button_editarFornecedores = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,7 +185,7 @@
             this.listView_Fornecedores.Location = new System.Drawing.Point(192, 105);
             this.listView_Fornecedores.MultiSelect = false;
             this.listView_Fornecedores.Name = "listView_Fornecedores";
-            this.listView_Fornecedores.Size = new System.Drawing.Size(360, 155);
+            this.listView_Fornecedores.Size = new System.Drawing.Size(335, 155);
             this.listView_Fornecedores.TabIndex = 25;
             this.listView_Fornecedores.UseCompatibleStateImageBehavior = false;
             this.listView_Fornecedores.View = System.Windows.Forms.View.Details;
@@ -226,12 +227,23 @@
             this.textBox_deletar.Size = new System.Drawing.Size(139, 23);
             this.textBox_deletar.TabIndex = 27;
             // 
+            // button_editarFornecedores
+            // 
+            this.button_editarFornecedores.Location = new System.Drawing.Point(452, 266);
+            this.button_editarFornecedores.Name = "button_editarFornecedores";
+            this.button_editarFornecedores.Size = new System.Drawing.Size(75, 23);
+            this.button_editarFornecedores.TabIndex = 28;
+            this.button_editarFornecedores.Text = "Editar";
+            this.button_editarFornecedores.UseVisualStyleBackColor = true;
+            this.button_editarFornecedores.Click += new System.EventHandler(this.button_editarFornecedores_Click);
+            // 
             // Form_fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_editarFornecedores);
             this.Controls.Add(this.textBox_deletar);
             this.Controls.Add(this.button_deletar);
             this.Controls.Add(this.listView_Fornecedores);
@@ -276,5 +288,6 @@
         private ColumnHeader columnHeader4;
         private Button button_deletar;
         private TextBox textBox_deletar;
+        private Button button_editarFornecedores;
     }
 }

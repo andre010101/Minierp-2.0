@@ -123,5 +123,14 @@ namespace MiniErp2._0
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button_editarFornecedores_Click(object sender, EventArgs e)
+        {
+            int i;
+            i = listView_Fornecedores.SelectedItems[0].Index;
+            textBox_NomeFornecedor.Text = listView_Fornecedores.Items[i].SubItems[1].Text.ToString();
+            textBox_cnpjFornecedor.Text = listView_Fornecedores.Items[i].SubItems[2].Text.ToString();
+            textBox_telefoneFornecedor.Text = listView_Fornecedores.Items[i].SubItems[3].Text.ToString();
+        }
     }
 }
