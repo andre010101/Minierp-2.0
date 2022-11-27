@@ -192,9 +192,37 @@ namespace MiniErp2._0
         }
 
         private void button_FiltarCliente_Click(object sender, EventArgs e)
-        {IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-            int idFiltro = int.Parse(textBox_FiltrarClientes.Text);
-            Clientes c = Contexto.clie.FirstOrDefault(Clientes => Clientes.id == idFiltro);
+        {
+            try
+            {
+
+
+                Contexto contexto = new Contexto();
+                int id = int.Parse(textBox_FiltrarClientes.Text);
+                Clientes c = contexto.clientes.Find(id);
+
+
+                using (Contexto db = new Contexto())
+                    if (MessageBox.Show("Você Realmente deseja Realizar o filtro?", "Filtrando Clientes", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        listView_Clientes.Items.Clear();
+                        ListViewItem item = new ListViewItem(c.id.ToString());
+                        item.SubItems.Add(c.nome);
+                        item.SubItems.Add(c.cpf);
+                        item.SubItems.Add(c.telefone);
+                        listView_Clientes.Items.Add(item);
+                    }
+               
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
         }
     }
