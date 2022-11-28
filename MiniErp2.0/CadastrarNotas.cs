@@ -121,5 +121,42 @@ namespace MiniErp2._0
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private void button_editarNotas_Click(object sender, EventArgs e)
+        {
+            int i;
+            i = listView_Notas.SelectedItems[0].Index;
+            textBox_infoNota.Text = listView_Notas.Items[i].SubItems[1].Text.ToString();
+            textBox_NfNumero.Text = listView_Notas.Items[i].SubItems[2].Text.ToString();
+            textBox_total.Text = listView_Notas.Items[i].SubItems[3].Text.ToString();
+        }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(textBox_updateNota.Text);
+
+                Contexto contexto = new Contexto();
+                Notas n = contexto.notas.Find(id);
+                n.infoNota = textBox_infoNota.Text;
+                n.Nfnumero = int.Parse(textBox_NfNumero.Text);
+                n.total = int.Parse(textBox_total.Text);
+
+                if (MessageBox.Show("Você Realmente deseja alterar?", "Alterar Nota", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    contexto.notas.Update(n);
+                    contexto.SaveChanges();
+                    MessageBox.Show("Nota alterado com sucesso");
+                }
+                listView_Notas.Items.Clear();
+            }
+            catch (Exception ex)
+
+
+            {
+                MessageBox.Show("error");
+            }
+        }
     }
 }

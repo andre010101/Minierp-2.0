@@ -33,7 +33,6 @@
             this.textBox_total = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_deletarNota = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox_NfNumero = new System.Windows.Forms.TextBox();
             this.NF = new System.Windows.Forms.Label();
             this.textBox_infoNota = new System.Windows.Forms.TextBox();
@@ -50,6 +49,10 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.button_DeletarNotas = new System.Windows.Forms.Button();
+            this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
+            this.textBox_updateNota = new System.Windows.Forms.TextBox();
+            this.button_editarNotas = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +83,7 @@
             this.textBox_total.Location = new System.Drawing.Point(24, 172);
             this.textBox_total.Name = "textBox_total";
             this.textBox_total.PlaceholderText = "Digite o id da Nota";
-            this.textBox_total.Size = new System.Drawing.Size(149, 23);
+            this.textBox_total.Size = new System.Drawing.Size(205, 23);
             this.textBox_total.TabIndex = 21;
             // 
             // label4
@@ -94,27 +97,18 @@
             // 
             // textBox_deletarNota
             // 
-            this.textBox_deletarNota.Location = new System.Drawing.Point(246, 239);
+            this.textBox_deletarNota.Location = new System.Drawing.Point(235, 210);
             this.textBox_deletarNota.Name = "textBox_deletarNota";
             this.textBox_deletarNota.PlaceholderText = "digite o id da nota";
             this.textBox_deletarNota.Size = new System.Drawing.Size(149, 23);
             this.textBox_deletarNota.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(246, 221);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 15);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Quantidade";
             // 
             // textBox_NfNumero
             // 
             this.textBox_NfNumero.Location = new System.Drawing.Point(24, 128);
             this.textBox_NfNumero.Name = "textBox_NfNumero";
             this.textBox_NfNumero.PlaceholderText = "Digite o CPF";
-            this.textBox_NfNumero.Size = new System.Drawing.Size(149, 23);
+            this.textBox_NfNumero.Size = new System.Drawing.Size(205, 23);
             this.textBox_NfNumero.TabIndex = 17;
             // 
             // NF
@@ -230,7 +224,7 @@
             // 
             // button_DeletarNotas
             // 
-            this.button_DeletarNotas.Location = new System.Drawing.Point(246, 268);
+            this.button_DeletarNotas.Location = new System.Drawing.Point(235, 239);
             this.button_DeletarNotas.Name = "button_DeletarNotas";
             this.button_DeletarNotas.Size = new System.Drawing.Size(66, 22);
             this.button_DeletarNotas.TabIndex = 26;
@@ -238,12 +232,43 @@
             this.button_DeletarNotas.UseVisualStyleBackColor = true;
             this.button_DeletarNotas.Click += new System.EventHandler(this.button_DeletarNotas_Click);
             // 
+            // textBox_updateNota
+            // 
+            this.textBox_updateNota.Location = new System.Drawing.Point(412, 210);
+            this.textBox_updateNota.Name = "textBox_updateNota";
+            this.textBox_updateNota.PlaceholderText = "digite o id da nota";
+            this.textBox_updateNota.Size = new System.Drawing.Size(149, 23);
+            this.textBox_updateNota.TabIndex = 27;
+            // 
+            // button_editarNotas
+            // 
+            this.button_editarNotas.Location = new System.Drawing.Point(412, 239);
+            this.button_editarNotas.Name = "button_editarNotas";
+            this.button_editarNotas.Size = new System.Drawing.Size(66, 22);
+            this.button_editarNotas.TabIndex = 28;
+            this.button_editarNotas.Text = "Editar";
+            this.button_editarNotas.UseVisualStyleBackColor = true;
+            this.button_editarNotas.Click += new System.EventHandler(this.button_editarNotas_Click);
+            // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(484, 239);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(66, 22);
+            this.button_update.TabIndex = 29;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            // 
             // CadastrarNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_update);
+            this.Controls.Add(this.button_editarNotas);
+            this.Controls.Add(this.textBox_updateNota);
             this.Controls.Add(this.button_DeletarNotas);
             this.Controls.Add(this.listView_Notas);
             this.Controls.Add(this.button_ConsultarNotas);
@@ -251,7 +276,6 @@
             this.Controls.Add(this.textBox_total);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_deletarNota);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_NfNumero);
             this.Controls.Add(this.NF);
             this.Controls.Add(this.textBox_infoNota);
@@ -273,7 +297,6 @@
         private TextBox textBox_total;
         private Label label4;
         private TextBox textBox_deletarNota;
-        private Label label3;
         private TextBox textBox_NfNumero;
         private Label NF;
         private TextBox textBox_infoNota;
@@ -290,5 +313,9 @@
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private Button button_DeletarNotas;
+        private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
+        private TextBox textBox_updateNota;
+        private Button button_editarNotas;
+        private Button button_update;
     }
 }
