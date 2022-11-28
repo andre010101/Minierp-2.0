@@ -53,6 +53,8 @@
             this.textBox_updateNota = new System.Windows.Forms.TextBox();
             this.button_editarNotas = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
+            this.textBox_filtrarNota = new System.Windows.Forms.TextBox();
+            this.button_filtrarNota = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +150,7 @@
             this.toolStripMenuItem5});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(981, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -260,12 +262,32 @@
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
+            // textBox_filtrarNota
+            // 
+            this.textBox_filtrarNota.Location = new System.Drawing.Point(678, 84);
+            this.textBox_filtrarNota.Name = "textBox_filtrarNota";
+            this.textBox_filtrarNota.PlaceholderText = "digite o id da nota";
+            this.textBox_filtrarNota.Size = new System.Drawing.Size(149, 23);
+            this.textBox_filtrarNota.TabIndex = 30;
+            // 
+            // button_filtrarNota
+            // 
+            this.button_filtrarNota.Location = new System.Drawing.Point(678, 113);
+            this.button_filtrarNota.Name = "button_filtrarNota";
+            this.button_filtrarNota.Size = new System.Drawing.Size(66, 22);
+            this.button_filtrarNota.TabIndex = 31;
+            this.button_filtrarNota.Text = "Filtrar";
+            this.button_filtrarNota.UseVisualStyleBackColor = true;
+            this.button_filtrarNota.Click += new System.EventHandler(this.button_filtrarNota_Click);
+            // 
             // CadastrarNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(981, 450);
+            this.Controls.Add(this.button_filtrarNota);
+            this.Controls.Add(this.textBox_filtrarNota);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.button_editarNotas);
             this.Controls.Add(this.textBox_updateNota);
@@ -317,5 +339,7 @@
         private TextBox textBox_updateNota;
         private Button button_editarNotas;
         private Button button_update;
+        private TextBox textBox_filtrarNota;
+        private Button button_filtrarNota;
     }
 }
