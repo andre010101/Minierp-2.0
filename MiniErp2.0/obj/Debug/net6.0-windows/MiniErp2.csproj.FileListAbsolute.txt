@@ -67,3 +67,5 @@ C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.For
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.cadastroDeProdutos.resources
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.Properties.Resources.resources
 C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\obj\Debug\net6.0-windows\MiniErp2._0.CadastrarNotas.resources
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Ambiente\Andre\MiniErp2.0\MiniErp2.0\bin\Debug\net6.0-windows\itextsharp.dll

@@ -55,6 +55,7 @@
             this.button_update = new System.Windows.Forms.Button();
             this.textBox_filtrarNota = new System.Windows.Forms.TextBox();
             this.button_filtrarNota = new System.Windows.Forms.Button();
+            this.button_gerarNota = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -280,12 +281,23 @@
             this.button_filtrarNota.UseVisualStyleBackColor = true;
             this.button_filtrarNota.Click += new System.EventHandler(this.button_filtrarNota_Click);
             // 
+            // button_gerarNota
+            // 
+            this.button_gerarNota.Location = new System.Drawing.Point(678, 181);
+            this.button_gerarNota.Name = "button_gerarNota";
+            this.button_gerarNota.Size = new System.Drawing.Size(257, 23);
+            this.button_gerarNota.TabIndex = 32;
+            this.button_gerarNota.Text = "Gerar Nota";
+            this.button_gerarNota.UseVisualStyleBackColor = true;
+            this.button_gerarNota.Click += new System.EventHandler(this.button_gerarNota_Click);
+            // 
             // CadastrarNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(981, 450);
+            this.Controls.Add(this.button_gerarNota);
             this.Controls.Add(this.button_filtrarNota);
             this.Controls.Add(this.textBox_filtrarNota);
             this.Controls.Add(this.button_update);
@@ -341,5 +353,6 @@
         private Button button_update;
         private TextBox textBox_filtrarNota;
         private Button button_filtrarNota;
+        private Button button_gerarNota;
     }
 }

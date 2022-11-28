@@ -4,10 +4,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
+using iTextSharp;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+
 
 namespace MiniErp2._0
 {
@@ -184,6 +192,47 @@ namespace MiniErp2._0
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void button_gerarNota_Click(object sender, EventArgs e)
+        {
+            try
+            {              
+                string nomeArquivo = "C:\\Ambiente\\Andre\\MiniErp2.0\\MiniErp2.0\\pdfNota\\notas.pdf";
+                FileStream arquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
+                iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4);
+                PdfWriter escritorPDF = PdfWriter.GetInstance(doc, arquivoPDF);
+                string dados = "";
+                Paragraph paragrafo = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 18, (int)System.Drawing.FontStyle.Bold));
+                paragrafo.Add("Nota Fiscal\n");
+                paragrafo.Add("________________________________________________");
+            
+                using (Contexto db = new Contexto())
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    List<Notas> lista = db.notas.ToList();
+                    foreach (Notas n in lista)
+                    {
+                        paragrafo.Font = new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 17, (int)System.Drawing.FontStyle.Italic);
+                        ListViewItem item = new ListViewItem(n.id.ToString());
+                        paragrafo.Alignment = Element.ALIGN_CENTER;
+                       
+                        //paragrafo.Add("");
+                        paragrafo.Add("Produto:" + n.infoNota + " " + "NF:" + n.Nfnumero.ToString()+ " " + "Total:" + n.total.ToString()+"BRL"+ "\n");
+                        paragrafo.Add("|||||||||||||||||||||||||||||||||");
+                        paragrafo.Add("__________________________________________________");
+
+                    }
+                }
+                doc.Open();
+                doc.Add(paragrafo);
+                doc.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
